@@ -1,0 +1,117 @@
+---
+title: "GitDemo"
+output: 
+  rmdformats::downcute:
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+```
+
+This is a demonstration script to show how a script can be converted to
+an R project and then a Git repository to be shared.
+
+## Why git??
+
+![](https://r-bio.github.io/img/git_areas.png)
+
+**Version control!** 
+
+This approach improves security and reproducibility.
+
+More information and background: https://r-bio.github.io/intro-git-rstudio/
+
+
+## Setting up Git on your computer
+
+### Step Zero
+
+Install git and create a github profile online.
+```{r, echo=TRUE}
+system2(command = 'git', stdout = TRUE)
+```
+If your computer doesn't have git installed, this command should prompt an install.
+
+After that, you can set up the connection to your github profile
+
+```{r git setup, echo=TRUE, eval=FALSE}
+install.packages("usethis")
+use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
+# fill in your github username and associated email above
+git_vaccinate()
+create_github_token()
+gitcreds::gitcreds_set()
+```
+
+Then we are set to load the library and get a status report
+
+```{r sitrep, echo=TRUE}
+library(usethis)
+usethis::git_sitrep()
+```
+
+## Getting your code ready for github
+
+### Create an R project
+
+This is a useful structure to organize multiple scripts within a project on its own, but is also the base unit of a git repository.
+
+![File > New Project > Existing Directory](https://codehorizons.com/wp-content/uploads/2021/08/GitHubBlog3-705x509.png)
+
+Or via command line:
+```{r proj init, eval=FALSE}
+create_project(path = "../GitDemo", open = TRUE, rstudio = TRUE)
+```
+
+### Initialize git
+
+Then all that is left to do is initialize git while in our directory with the R project.
+
+```{r initialize, echo=TRUE, eval=FALSE}
+system2(command = "git init", stdout = TRUE)
+```
+
+Restart R Studio, if it worked you should have a .Rproj file in your directory and a Git tab in R Studio.
+
+![](git.png)
+
+Next we **commit**, but don't push! This can be done via command line (below, for reference), but I always do it manually.
+
+```{r commit, eval = FALSE}
+system2(command = "git add .", stdout = TRUE)
+system2(command = 'git commit -m "Initial commit"', stdout = TRUE)
+```
+
+Now we move to setting up the github side, creating a new repo and using the presets for an existing directory.
+
+https://github.com/gghill
+
+github will give us some code which we need to run in the terminal *not* console
+
+```
+git remote add origin https://github.com/YOURUSERNAME/example_project.git
+git branch -M main
+git push -u origin main
+```
+
+## Done!
+
+Now you can code, commit, and push to keep an online version up to date and visible to collaborators.
+
+Other functions:
+
+* README
+* gitignore
+* Fork
+* Branch
+  + model development
+* Pull
+* Organizations!
+
+https://github.com/gghill/GitDemo
+
+Additional reading on the workflow:
+
+https://medium.com/@jonathanmines/the-ultimate-github-collaboration-guide-df816e98fb67

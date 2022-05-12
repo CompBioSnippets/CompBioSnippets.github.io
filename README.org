@@ -1,0 +1,159 @@
+Bi-weekly sessions introducing useful code for biological data analysis
+
+
+* Snippet sessions
+In folder BiWeeklySessions
+
+** [2022-05-05] Parallel computing in R by Cesc
+Parallel.html
+** [2022-05-05] For-loops in bash (shell scripting)  by Alexander
+*** Example for automatic download of data
+
+#+begin_src sh
+#!/bin/sh
+
+link1="https://bioinformatics.psb.ugent.be/gdb/seagrasses"
+link2="https://bioinformatics.psb.ugent.be/gdb/seagrasses/Species_for_orthogroups_analysis/cds_seq"
+link3="https://bioinformatics.psb.ugent.be/gdb/seagrasses/Species_for_orthogroups_analysis/protein_seq"
+
+for i in Cymodocea_nodosa Halodule_pinifolia Posidonia_oceanica Potamogeton_acutifolius Thalassia_testudinum Zostera_marina
+do 
+   mkdir $i
+   cd $i
+   wget $link1/$i/$i.cds.fa
+   wget $link1/$i/$i.gff3
+   wget $link1/$i/$i.pep.fa
+   wget $link1/$i/"$i"_TE.gff3
+   wget $link1/$i/"$i"_Transcriptome_data_info.txt
+   wget $link1/$i/"$i"_functional_annotation.txt
+   wget $link1/$i/"$i"_genome.fasta.gz
+   wget $link1/$i/md5.txt
+   wget $link1/$i/readme.txt
+   cd ..
+done
+
+#+end_src
+
+
+*** Example to sort a samtools file
+
+#+begin_src sh
+for f in S3_5 S3_10 S3_15 H4_5 H4_10 H4_15 H3_5 H3_10 H3_15 S2_5 S2_10 S2_15 H2_5 H2_10 S1_5 S1_10 S4_5 S4_10 H1_5 H1_10 H1_15 FS1 FS2 FS3 FS4 FS5 FS6 FS7 FS8 FS9 FS10 FH1 FH2 FH3 FH4 FH5 FH6 FH7 FH8 FH9 FH10
+ do
+ samtools sort "$f".bam -o "$f".sorted.bam
+ done
+#+end_src
+
+#+begin_src sh
+for i in  *.bam
+do 
+  nohup samtools sort "$i" $(echo $i | sed 's/.bam/Sorted/') &
+done
+#+end_src
+
+#+begin_src sh
+for f in 23..56
+do
+samtools sort -n -f ZepClon"$f".bam ZepClon"$f".sorted.bam
+done
+#+end_src
+
+** [2022-05-12] Github by Griffin
+File: Github_Griffin.Rmd
+
+* Useful code
+** Bash
+*** Upload or download data to a remote server
+
+**** Download from server or upload to server
+- via filezilla (graphical user interface) or on the command line 'rsync'
+
+rsync -arvz --progress
+
+cd (to change directory)
+--------------------------------------------
+
+Download from server 
+rsync -arvz --progress  alj@158.39.30.200://home/alj/ServerTrial/Overlaps0.txt /home/alj/Downloads/
+
+Download from server to current directory
+rsync -arvz --progress  alj@158.39.30.200://home/alj/ServerTrial/Overlaps0.txt .
+
+Upload to server
+rsync -arvz --progress  Overlaps0.txt alj@158.39.30.200://home/alj/ServerTrial
+rsync -arvz --progress  /home/alj/Projects/Overlaps0.txt alj@158.39.30.200://home/alj/ServerTrial
+
+Upload all files in a folder
+rsync -arvz --progress  /home/alj/Projects/* alj@158.39.30.200://home/alj/ServerTrial
+
+Upload a folder and all the containing files
+rsync -arvz --progress  /home/alj/Projects alj@158.39.30.200://home/alj/ServerTrial
+
+
+**** Download from internet to remote server
+-----------------------
+wget link
+
+
+
+*** Memory usage
+#+begin_src sh
+htop
+#end_src
+
+*** Look at files
+#+begin_src sh
+more filename.txt
+
+Look at first few lines
+head filename.txt 
+
+Look at ending lines
+tail filename.txt
+
+unzip a gz file:
+gunzip filname.gz
+
+
+unzip a zip file:
+unzip filename.zip
+
+unzip a file ending tar.gz
+tar -zxvf filename.tar.gz
+#+end_src
+
+*** Running commands when you are not logged into the server anymore
+
+tmux and nohup
+
+tmux cheat sheet: https://tmuxcheatsheet.com/
+
+First create session
+tmux new -s SESSIONNAME
+Detach from this session
+ctrl+b d
+or
+ctrl+a d
+
+List available sessions
+tmux ls
+
+Reattach to session
+tmux a -t SESSIONNAME
+
+using nohup
+http://marinetics.org/RunningProcesses.org/
+nohup COMMAND &
+
+
+**** R
+***** Run R from bash
+#+begin_src sh
+R CMD BATCH Rscript.r
+#+end_src
+
+* Ideas/wishes
+- MaxentVariable selection package (Alex will introduce it the 26th of May)
+- Sed/Awk replacements
+- R renaming of files to drag out some information for example grep()
+
