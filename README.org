@@ -5,7 +5,7 @@ Bi-weekly sessions introducing useful code for biological data analysis
 In folder BiWeeklySessions
 
 ** [2022-05-05] Parallel computing in R by Cesc
-File: https://github.com/CompBioSnippets/CompBioSnippets.github.io/blob/main/BiWeeklySessions/Parallel.html
+File: https://compbiosnippets.github.io/BiWeeklySessions/Parallel.html
 ** [2022-05-05] For-loops in bash (shell scripting)  by Alexander
 *** Example for automatic download of data
 
@@ -59,7 +59,7 @@ done
 #+end_src
 
 ** [2022-05-12] Github by Griffin
-File: https://github.com/CompBioSnippets/CompBioSnippets.github.io/blob/main/BiWeeklySessions/Github_Griffin.Rmd
+File: https://compbiosnippets.github.io/BiWeeklySessions/Github_Griffin.Rmd
 
 * Useful code
 ** Bash
