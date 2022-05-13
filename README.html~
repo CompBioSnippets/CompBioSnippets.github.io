@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-13 fr. 08:08 -->
+<!-- 2022-05-13 fr. 08:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -200,31 +200,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgba0a440">1. Snippet sessions</a>
+<li><a href="#orgc232d9d">1. Snippet sessions</a>
 <ul>
-<li><a href="#org97118bf">1.1. <span class="timestamp-wrapper"><span class="timestamp">[2022-05-05 to.] </span></span> Parallel computing in R by Cesc</a></li>
-<li><a href="#orgb07f17e">1.2. <span class="timestamp-wrapper"><span class="timestamp">[2022-05-05 to.] </span></span> For-loops in bash (shell scripting)  by Alexander</a>
+<li><a href="#orgf1a0367">1.1. <span class="timestamp-wrapper"><span class="timestamp">[2022-05-05 to.] </span></span> Parallel computing in R by Cesc</a></li>
+<li><a href="#org24fe348">1.2. <span class="timestamp-wrapper"><span class="timestamp">[2022-05-05 to.] </span></span> For-loops in bash (shell scripting)  by Alexander</a>
 <ul>
-<li><a href="#orgeefe14a">1.2.1. Example for automatic download of data</a></li>
-<li><a href="#orge900708">1.2.2. Example to sort a samtools file</a></li>
+<li><a href="#orgd5a8b2a">1.2.1. Example for automatic download of data</a></li>
+<li><a href="#org4ebe045">1.2.2. Example to sort a samtools file</a></li>
 </ul>
 </li>
-<li><a href="#org7a56e83">1.3. <span class="timestamp-wrapper"><span class="timestamp">[2022-05-12 to.] </span></span> Github by Griffin</a></li>
+<li><a href="#org7ea460f">1.3. <span class="timestamp-wrapper"><span class="timestamp">[2022-05-12 to.] </span></span> Github by Griffin</a></li>
 </ul>
 </li>
-<li><a href="#org5c87d0e">2. Useful code</a>
+<li><a href="#org182d102">2. Useful code</a>
 <ul>
-<li><a href="#org135fdc0">2.1. Bash</a>
+<li><a href="#org97005df">2.1. Bash</a>
 <ul>
-<li><a href="#org95dc003">2.1.1. Upload or download data to a remote server</a></li>
-<li><a href="#org3b6cefe">2.1.2. Memory usage</a></li>
-<li><a href="#orgbaa28e1">2.1.3. Look at files</a></li>
-<li><a href="#org323d62d">2.1.4. Running commands when you are not logged into the server anymore</a></li>
+<li><a href="#org23dca59">2.1.1. Upload or download data to a remote server</a></li>
+<li><a href="#org9e61a47">2.1.2. Memory usage</a></li>
+<li><a href="#org3c93586">2.1.3. Look at files</a></li>
+<li><a href="#org8bd8091">2.1.4. Running commands when you are not logged into the server anymore</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org567c504">3. Ideas/wishes</a></li>
+<li><a href="#org6416e29">3. Ideas/wishes</a></li>
 </ul>
 </div>
 </div>
@@ -233,28 +233,28 @@ Bi-weekly sessions introducing useful code for biological data analysis
 </p>
 
 
-<div id="outline-container-orgba0a440" class="outline-2">
-<h2 id="orgba0a440"><span class="section-number-2">1.</span> Snippet sessions</h2>
+<div id="outline-container-orgc232d9d" class="outline-2">
+<h2 id="orgc232d9d"><span class="section-number-2">1.</span> Snippet sessions</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In folder BiWeeklySessions
 </p>
 </div>
 
-<div id="outline-container-org97118bf" class="outline-3">
-<h3 id="org97118bf"><span class="section-number-3">1.1.</span> <span class="timestamp-wrapper"><span class="timestamp">[2022-05-05 to.] </span></span> Parallel computing in R by Cesc</h3>
+<div id="outline-container-orgf1a0367" class="outline-3">
+<h3 id="orgf1a0367"><span class="section-number-3">1.1.</span> <span class="timestamp-wrapper"><span class="timestamp">[2022-05-05 to.] </span></span> Parallel computing in R by Cesc</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
-File: <a href="https://github.com/CompBioSnippets/CompBioSnippets.github.io/blob/main/BiWeeklySessions/Parallel.html">https://github.com/CompBioSnippets/CompBioSnippets.github.io/blob/main/BiWeeklySessions/Parallel.html</a>
+Parallel.html
 </p>
 </div>
 </div>
-<div id="outline-container-orgb07f17e" class="outline-3">
-<h3 id="orgb07f17e"><span class="section-number-3">1.2.</span> <span class="timestamp-wrapper"><span class="timestamp">[2022-05-05 to.] </span></span> For-loops in bash (shell scripting)  by Alexander</h3>
+<div id="outline-container-org24fe348" class="outline-3">
+<h3 id="org24fe348"><span class="section-number-3">1.2.</span> <span class="timestamp-wrapper"><span class="timestamp">[2022-05-05 to.] </span></span> For-loops in bash (shell scripting)  by Alexander</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-orgeefe14a" class="outline-4">
-<h4 id="orgeefe14a"><span class="section-number-4">1.2.1.</span> Example for automatic download of data</h4>
+<div id="outline-container-orgd5a8b2a" class="outline-4">
+<h4 id="orgd5a8b2a"><span class="section-number-4">1.2.1.</span> Example for automatic download of data</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b22222;">#</span><span style="color: #b22222;">!/bin/</span><span style="color: #a020f0;">sh</span>
@@ -285,8 +285,8 @@ File: <a href="https://github.com/CompBioSnippets/CompBioSnippets.github.io/blob
 </div>
 
 
-<div id="outline-container-orge900708" class="outline-4">
-<h4 id="orge900708"><span class="section-number-4">1.2.2.</span> Example to sort a samtools file</h4>
+<div id="outline-container-org4ebe045" class="outline-4">
+<h4 id="org4ebe045"><span class="section-number-4">1.2.2.</span> Example to sort a samtools file</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #a020f0;">for</span> f<span style="color: #a020f0;"> in</span> S3_5 S3_10 S3_15 H4_5 H4_10 H4_15 H3_5 H3_10 H3_15 S2_5 S2_10 S2_15 H2_5 H2_10 S1_5 S1_10 S4_5 S4_10 H1_5 H1_10 H1_15 FS1 FS2 FS3 FS4 FS5 FS6 FS7 FS8 FS9 FS10 FH1 FH2 FH3 FH4 FH5 FH6 FH7 FH8 FH9 FH10
@@ -315,30 +315,30 @@ samtools sort -n -f ZepClon<span style="color: #8b2252;">"$f"</span>.bam ZepClon
 </div>
 </div>
 
-<div id="outline-container-org7a56e83" class="outline-3">
-<h3 id="org7a56e83"><span class="section-number-3">1.3.</span> <span class="timestamp-wrapper"><span class="timestamp">[2022-05-12 to.] </span></span> Github by Griffin</h3>
+<div id="outline-container-org7ea460f" class="outline-3">
+<h3 id="org7ea460f"><span class="section-number-3">1.3.</span> <span class="timestamp-wrapper"><span class="timestamp">[2022-05-12 to.] </span></span> Github by Griffin</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
-File: <a href="https://github.com/CompBioSnippets/CompBioSnippets.github.io/blob/main/BiWeeklySessions/Github_Griffin.Rmd">https://github.com/CompBioSnippets/CompBioSnippets.github.io/blob/main/BiWeeklySessions/Github_Griffin.Rmd</a>
+File: Github<sub>Griffin.Rmd</sub>
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5c87d0e" class="outline-2">
-<h2 id="org5c87d0e"><span class="section-number-2">2.</span> Useful code</h2>
+<div id="outline-container-org182d102" class="outline-2">
+<h2 id="org182d102"><span class="section-number-2">2.</span> Useful code</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org135fdc0" class="outline-3">
-<h3 id="org135fdc0"><span class="section-number-3">2.1.</span> Bash</h3>
+<div id="outline-container-org97005df" class="outline-3">
+<h3 id="org97005df"><span class="section-number-3">2.1.</span> Bash</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-org95dc003" class="outline-4">
-<h4 id="org95dc003"><span class="section-number-4">2.1.1.</span> Upload or download data to a remote server</h4>
+<div id="outline-container-org23dca59" class="outline-4">
+<h4 id="org23dca59"><span class="section-number-4">2.1.1.</span> Upload or download data to a remote server</h4>
 <div class="outline-text-4" id="text-2-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="org82cc7cb"></a>Download from server or upload to server<br />
+<li><a id="org2d44e43"></a>Download from server or upload to server<br />
 <div class="outline-text-5" id="text-2-1-1-1">
 <ul class="org-ul">
 <li>via filezilla (graphical user interface) or on the command line 'rsync'</li>
@@ -382,7 +382,7 @@ rsync -arvz &#x2013;progress  /home/alj/Projects alj@158.39.30.200://home/alj/Se
 </li>
 
 
-<li><a id="org19302d7"></a>Download from internet to remote server<br />
+<li><a id="org5fcae39"></a>Download from internet to remote server<br />
 <div class="outline-text-5" id="text-2-1-1-2">
 <hr />
 <p>
@@ -395,8 +395,8 @@ wget link
 
 
 
-<div id="outline-container-org3b6cefe" class="outline-4">
-<h4 id="org3b6cefe"><span class="section-number-4">2.1.2.</span> Memory usage</h4>
+<div id="outline-container-org9e61a47" class="outline-4">
+<h4 id="org9e61a47"><span class="section-number-4">2.1.2.</span> Memory usage</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <p>
 #+begin<sub>src</sub> sh
@@ -406,8 +406,8 @@ htop
 </div>
 </div>
 
-<div id="outline-container-orgbaa28e1" class="outline-4">
-<h4 id="orgbaa28e1"><span class="section-number-4">2.1.3.</span> Look at files</h4>
+<div id="outline-container-org3c93586" class="outline-4">
+<h4 id="org3c93586"><span class="section-number-4">2.1.3.</span> Look at files</h4>
 <div class="outline-text-4" id="text-2-1-3">
 <div class="org-src-container">
 <pre class="src src-sh">more filename.txt
@@ -432,8 +432,8 @@ tar -zxvf filename.tar.gz
 </div>
 </div>
 
-<div id="outline-container-org323d62d" class="outline-4">
-<h4 id="org323d62d"><span class="section-number-4">2.1.4.</span> Running commands when you are not logged into the server anymore</h4>
+<div id="outline-container-org8bd8091" class="outline-4">
+<h4 id="org8bd8091"><span class="section-number-4">2.1.4.</span> Running commands when you are not logged into the server anymore</h4>
 <div class="outline-text-4" id="text-2-1-4">
 <p>
 tmux and nohup
@@ -471,9 +471,9 @@ nohup COMMAND &amp;
 
 
 <ol class="org-ol">
-<li><a id="org963f56a"></a>R<br />
+<li><a id="org66eaced"></a>R<br />
 <ol class="org-ol">
-<li><a id="org208e418"></a>Run R from bash<br />
+<li><a id="org55d62d6"></a>Run R from bash<br />
 <div class="outline-text-6" id="text-2-1-4-1-1">
 <div class="org-src-container">
 <pre class="src src-sh">R CMD BATCH Rscript.r
@@ -488,8 +488,8 @@ nohup COMMAND &amp;
 </div>
 </div>
 
-<div id="outline-container-org567c504" class="outline-2">
-<h2 id="org567c504"><span class="section-number-2">3.</span> Ideas/wishes</h2>
+<div id="outline-container-org6416e29" class="outline-2">
+<h2 id="org6416e29"><span class="section-number-2">3.</span> Ideas/wishes</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>MaxentVariable selection package (Alex will introduce it the 26th of May)</li>
@@ -501,7 +501,7 @@ nohup COMMAND &amp;
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Alexander Jueterbock</p>
-<p class="date">Created: 2022-05-13 fr. 08:08</p>
+<p class="date">Created: 2022-05-13 fr. 08:00</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
