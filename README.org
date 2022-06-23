@@ -40,6 +40,37 @@ or more times, and =\\(= simply refers to "(" but has to be preceded
 with back-slashes because of its special meaning in the string.
 
 *** Using sed
+
+First we create the file
+#+begin_src sh
+  echo "Trial 1 58 cervicornis (52 match)" > Test.txt
+  echo "Trial 2 60 terrestris (51 matched)" >> Test.txt
+  echo "Trial 8 109 flavicollis (101 matches)" >> Test.txt
+#+end_src
+
+sed is a stream editor, which means that it will go through a file line by line and apply the commands
+
+The basic syntax is
+
+#+begin_src sh
+  sed 'EditCommand' InputFile.txt
+#+end_src
+
+Substitutions are the most common editing actions that =sed= is used for.
+The basic syntax here is
+
+#+begin_src sh
+  sed 's/pattern/replacement/flags' InputFile.txt
+#+end_src
+
+For flags, we have the option =g=, for example, which applies the changes globally and not only the first occurrence
+
+To extract the numbers as before, we do:
+#+begin_src sh
+cat Test.txt | sed 's/Trial.*(//g' | sed 's/ .*//g'
+#+end_src
+
+
 ** [2022-05-30] MaxentVarableSelection - Alexander
 Introducing this package: https://cran.r-project.org/web/packages/MaxentVariableSelection/vignettes/MaxentVariableSelection.pdf
 
