@@ -1,8 +1,50 @@
 Bi-weekly sessions introducing useful code for biological data analysis
 
 
+* Ideas/wishes
+- MaxentVariable selection package (Alex will introduce it the 26th of May)
+- Sed/Awk replacements
+- R renaming of files to drag out some information for example grep()
+
+
 * Snippet sessions
 In folder BiWeeklySessions
+** [2022-06-23] Stripping patterned text out of complex strings- Alexander
+
+*** Using gsub in R
+
+As an example, how do we get in the following vector the number
+contained in the brackets?
+#+begin_src R
+  entries <-c ("Trial 1 58 cervicornis (52 match)",
+      "Trial 2 60 terrestris (51 matched)",
+      "Trial 8 109 flavicollis (101 matches)")
+#+end_src
+
+First, we can remove everything before the opening bracket,
+including this bracket
+
+#+begin_src R
+extract1 <- gsub("^.*\\(","",entries)  
+#+end_src
+
+Then we can get rid of the part by removing the space after the number
+and all that follows
+#+begin_src R
+  extract2 <- gsub(" .*","",extract1)    
+#+end_src
+
+Here, =^= refers to the beginning of the string, =.= refers to any
+character, =*= means that the preceding character will be matched zero
+or more times, and =\\(= simply refers to "(" but has to be preceded
+with back-slashes because of its special meaning in the string.
+
+*** Using sed
+** [2022-05-30] MaxentVarableSelection - Alexander
+Introducing this package: https://cran.r-project.org/web/packages/MaxentVariableSelection/vignettes/MaxentVariableSelection.pdf
+
+** [2022-05-12] Github by Griffin
+File: https://compbiosnippets.github.io/BiWeeklySessions/Github_Griffin.Rmd
 
 ** [2022-05-05] Parallel computing in R by Cesc
 File: https://compbiosnippets.github.io/BiWeeklySessions/Parallel.html
@@ -58,8 +100,9 @@ samtools sort -n -f ZepClon"$f".bam ZepClon"$f".sorted.bam
 done
 #+end_src
 
-** [2022-05-12] Github by Griffin
-File: https://compbiosnippets.github.io/BiWeeklySessions/Github_Griffin.Rmd
+
+
+
 
 * Useful code
 ** Bash
@@ -151,9 +194,3 @@ nohup COMMAND &
 #+begin_src sh
 R CMD BATCH Rscript.r
 #+end_src
-
-* Ideas/wishes
-- MaxentVariable selection package (Alex will introduce it the 26th of May)
-- Sed/Awk replacements
-- R renaming of files to drag out some information for example grep()
-
