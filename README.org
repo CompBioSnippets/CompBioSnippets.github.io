@@ -9,6 +9,12 @@ Bi-weekly sessions introducing useful code for biological data analysis
 
 * Snippet sessions
 In folder BiWeeklySessions
+** [2023-04-26] Leaflet by Griffin
+Coming soon...
+
+** [2023-03-29] Rasters by Griffin
+[[https://htmlpreview.github.io/?https://raw.githubusercontent.com/CompBioSnippets/CompBioSnippets.github.io/main/BiWeeklySessions/RastSnipGH.html][Raster Snippet GH]]
+
 ** [2022-06-23] Stripping patterned text out of complex strings- Alexander
 
 *** Using gsub in R
@@ -75,7 +81,7 @@ cat Test.txt | sed 's/Trial.*(//g' | sed 's/ .*//g'
 Introducing this package: https://cran.r-project.org/web/packages/MaxentVariableSelection/vignettes/MaxentVariableSelection.pdf
 
 ** [2022-05-12] Github by Griffin
-File: https://compbiosnippets.github.io/BiWeeklySessions/Github_Griffin.Rmd
+[[https://htmlpreview.github.io/?https://raw.githubusercontent.com/CompBioSnippets/CompBioSnippets.github.io/main/BiWeeklySessions/GitDemo_GH.html][Intro to GitHub GH]]
 
 ** [2022-05-05] Parallel computing in R by Cesc
 File: https://compbiosnippets.github.io/BiWeeklySessions/Parallel.html
